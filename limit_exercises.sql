@@ -39,6 +39,15 @@ LIMIT and OFFSET can be used to create multiple pages of data.
 What is the relationship between OFFSET (number of results to skip), LIMIT (number of results per page), 
 and the page number?
 */
+
+SELECT *
+FROM employees
+WHERE hire_date LIKE "199%"
+	AND birth_date LIKE "%12-25"
+ORDER BY hire_date
+LIMIT 5 offset 45
+;
+
 /* With OFFSET, we are able to "skip" a specified number of results (LIMIT's) which in turn, skips the correlating
 pages. These all work hand in hand. If there are 5 results or LIMITS per page and we OFFSET or skipped to results after
 50, then we skipped 10 pages of results. 
