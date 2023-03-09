@@ -67,7 +67,7 @@ Sort the results by their employee number.
 Enter a comment with the number of employees returned, the first employee number and their first and last name, 
 and the last employee number with their first and last name.
 */
--- A. 900 / emp_no 10021, Ramzi Erde / emp_no 499648, Tadahiro Erde
+-- A. 899 / emp_no 10021, Ramzi Erde / emp_no 499648, Tadahiro Erde
 
 SELECT *
 FROM employees
@@ -82,7 +82,7 @@ Sort the results by their hire date, so that the newest employees are listed fir
 Enter a comment with the number of employees returned, the name of the newest employee, 
 and the name of the oldest employee.
 */
--- A. 900 / Teiji Eldridge / Sergi Erde
+-- A. 899 / Teiji Eldridge / Sergi Erde
 
 SELECT *
 FROM employees
@@ -97,7 +97,7 @@ Sort the results so that the oldest employee who was hired last is the first res
 Enter a comment with the number of employees returned, the name of the oldest employee who was hired last, 
 and the name of the youngest employee who was hired first.
 */
--- A. 363 / Khun Bernini / Douadi Pettis
+-- A. 362 / Khun Bernini / Douadi Pettis
 
 SELECT *
 FROM employees
