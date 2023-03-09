@@ -67,7 +67,7 @@ LIMIT 3
 
 -- #4 Find all unique last names that start with 'E'.
 
-SELECT last_name
+SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE "E%"
 ;
@@ -75,7 +75,7 @@ WHERE last_name LIKE "E%"
 
 -- #5 Find all unique last names that start or end with 'E'.
 
-SELECT last_name
+SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE "E%"
 	OR last_name LIKE "%E"
@@ -83,7 +83,7 @@ WHERE last_name LIKE "E%"
 
 -- #6 Find all unique last names that end with E, but does not start with E?
 
-SELECT last_name
+SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE "%E"
 	AND last_name NOT LIKE "E%"
@@ -91,9 +91,9 @@ WHERE last_name LIKE "%E"
 
 -- #7 Find all unique last names that start and end with 'E'.
 
-SELECT last_name
+SELECT DISTINCT last_name
 FROM employees
-WHERE last_name LIKE "E%"
+WHERE last_name LIKE "E%" -- where last_name like "e%e" shorter way to write
 	AND last_name LIKE "%E"
 ;
 
@@ -127,14 +127,14 @@ LIMIT 3
 
 -- #11 Find all unique last names that have a 'q' in their last name.
 
-SELECT last_name
+SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE "%q%"
 ;
 
 -- #12 Find all unique last names that have a 'q' in their last name but not 'qu'.
 
-SELECT last_name
+SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE "%q%"
 	AND last_name NOT LIKE "%qu%"
