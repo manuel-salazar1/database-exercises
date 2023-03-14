@@ -28,7 +28,7 @@ RIGHT JOIN roles on users.role_id = roles.id
 ;
 
 -- #3
-SELECT roles.name, COUNT(*)
+SELECT roles.name, COUNT(users.name)
 FROM users
 RIGHT JOIN roles on users.role_id = roles.id
 GROUP BY roles.name
@@ -72,7 +72,7 @@ ORDER BY departments.dept_name
 
 /* #4
 Find the current titles of employees currently working in the Customer Service department.
-*/
+
 
 SELECT titles.title as "Title", COUNT(*)
 FROM employees
@@ -84,6 +84,7 @@ WHERE titles.to_date > NOW()
 GROUP BY titles.title
 ORDER BY titles.title
 ;
+*/
 
 -- used USING statement
 SELECT titles.title as "Titles", COUNT(*)
@@ -180,7 +181,7 @@ LIMIT 1
 Determine the average salary for each department. Use all salary information and round your results.
 */
 
-SELECT departments.dept_name, ROUND(AVG(salaries.salary), 0)
+SELECT departments.dept_name, ROUND(AVG(salaries.salary), 0) as average_salary
 FROM employees
 JOIN salaries USING (emp_no)
 JOIN dept_emp USING (emp_no)
@@ -219,12 +220,14 @@ WHERE dept_manager.to_date > NOW()
 /* Bonus #2
 Bonus Who is the highest paid employee within each department.
 
+Find the max salary for each department
+link the employee to the highest salary for each department
+
+tables needed - employees (emp_no, first_name, last_name)
+				dept_emp (emp_no, dept_no, to_date)
+				departments (dept_no)
+                salaries (emp_no, salary, to_date)
+
 */
-
-
-
-
-
-
 
 
